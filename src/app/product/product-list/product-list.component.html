@@ -1,7 +1,13 @@
 <div class="container">
     <h2>Out latest collection</h2><br>
+
+    <mat-form-field>
+        <!-- dollar sign to submit event -->
+        <input matInput (keyup)="applyFilter($event)" placeholder="Search">
+    </mat-form-field>
+
     <div fxLayout="row wrap" fxLayoutGap="50px grid">
-        <div *ngFor="let product of products">
+        <div *ngFor="let product of filteredProducts">
             <!-- interpolation -->
             <mat-card class="product-card" appearance="outlined" (click)="addToCart(product)">
                 <img mat-card-image [src]="'assets/images/' + product.image_url">
@@ -12,4 +18,5 @@
             </mat-card>
         </div>
     </div>    
+
 </div>
