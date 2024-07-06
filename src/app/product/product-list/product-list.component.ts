@@ -3,11 +3,11 @@ import { ProductService } from '../product.service'; // To import the getProduct
 import { Product } from '../../models/product';
 import { CommonModule } from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
-
+import { FlexModule } from '@angular/flex-layout';
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, MatCardModule],
+  imports: [CommonModule, MatCardModule, FlexModule],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
