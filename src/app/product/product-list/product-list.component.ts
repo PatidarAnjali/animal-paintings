@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service'; // To import the getProducts() method
 import { Product } from '../../models/product';
 import { CommonModule } from '@angular/common';
+import {MatCardModule} from '@angular/material/card';
+
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatCardModule],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
