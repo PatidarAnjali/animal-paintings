@@ -11,6 +11,14 @@
                 <span class="price" matListItemTitle>Total (CAD)</span>
                 <span class="price" matListItemLine>{{totalPrice | currency: 'CAD'}}</span>
             </mat-list-item>
+
+            <mat-list-item class="text-right">
+                <button mat-flat-button (click)="clearCart()">Clear cart</button>
+            </mat-list-item>
+
+            <mat-list-item class="text-right">
+                <button mat-raised-button color="accent" (click)="checkOut()">Checkout</button>
+            </mat-list-item>
         </mat-list>
     </mat-card>
 </div>
