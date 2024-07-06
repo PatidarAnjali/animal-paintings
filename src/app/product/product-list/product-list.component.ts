@@ -16,7 +16,7 @@ export class ProductListComponent implements OnInit {
   constructor(private productService: ProductService){} // instance of product service to load products onto lifecycle hook
 
   ngOnInit(): void { // interface
-    // load products here
+    // load products here from mockoon
     this.productService.getProducts().subscribe(data => {
       this.products = data;
     })
