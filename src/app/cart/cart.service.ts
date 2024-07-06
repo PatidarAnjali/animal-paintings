@@ -16,6 +16,7 @@ export class CartService {
   // returns an oservable to make it asynchronous
   // calls the post method on HTTP client and tell it that its of type Product
   // this.apiUrl = specify end point and then submit product as JSON format to cart
+  
   addToCart(product: Product): Observable<Product>{
     return this.http.post<Product>(this.apiUrl, product);
   }
