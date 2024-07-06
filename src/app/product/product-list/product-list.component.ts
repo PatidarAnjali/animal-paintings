@@ -7,11 +7,12 @@ import { MatCardModule } from '@angular/material/card';
 import { CartService } from '../../cart/cart.service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from "@angular/material/input";
+import { MatSelectModule } from "@angular/material/select";
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, FlexModule, MatCardModule, MatSnackBarModule, MatInputModule],
+  imports: [CommonModule, FlexModule, MatCardModule, MatSnackBarModule, MatInputModule, MatSelectModule],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
@@ -19,6 +20,7 @@ export class ProductListComponent implements OnInit {
 
   products: Product[] = [];
   filteredProducts: Product[] = [];
+  sortOrder: string = "";
 
   constructor(
     private productService: ProductService,
@@ -46,6 +48,7 @@ export class ProductListComponent implements OnInit {
     });
   }
 
+  // filter by search
   applyFilter(event: Event): void{
     let searchTerm = (event.target as HTMLInputElement).value; // read value from entire value field
     searchTerm = searchTerm.toLowerCase(); // convert to lower case
@@ -53,5 +56,18 @@ export class ProductListComponent implements OnInit {
     this.filteredProducts = this.products.filter(
       product => product.name.toLowerCase().includes(searchTerm)
     )
+
+    this.softProducts(this.sortOrder);
+  }
+
+  // sort by price
+  softProducts(sortValue: string){
+    this.sortOrder = sortValue;
+
+    if(this.sortOrder === "priceLowHigh"){
+      this.filteredProducts.sort((a, b) => a.price - b.price);
+    } else if(this.sortOrder === "priceHighLow"){
+      this.filteredProducts.sort((a, b) => b.price - a.price);
+    }
   }
 }
