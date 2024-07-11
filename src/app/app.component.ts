@@ -10,7 +10,6 @@ import { CartModule } from './cart/cart.module';
   standalone: true,
   imports: [RouterOutlet, ProductModule, CartModule, MatToolbarModule, MatButtonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'animal-paintings';
