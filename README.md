@@ -48,7 +48,7 @@ animal-paintings/
 
 ### Screenshots
 <img width="3024" height="1416" alt="image" src="https://github.com/user-attachments/assets/71750492-4f05-4e56-8511-88d447f0ba15" />
-<img width="3024" height="1416" alt="image" src="https://github.com/user-attachments/assets/e5c60c38-7d9c-4aa4-8b7e-b89483a7988d" />
+<img width="1868" height="772" alt="image" src="https://github.com/user-attachments/assets/82262f04-7a81-4cf6-8a68-27d685552e4c" />
 
 
 ### References
