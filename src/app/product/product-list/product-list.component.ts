@@ -31,6 +31,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void { // interface
     // load products here from mockoon
     this.productService.getProducts().subscribe(data => {
+      console.log('PRODUCT DATA:', data);
       this.products = data;
       this.filteredProducts = data;
     })

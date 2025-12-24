@@ -17,7 +17,9 @@
         <div *ngFor="let product of filteredProducts">
             <!-- interpolation -->
             <mat-card class="product-card" appearance="outlined" (click)="addToCart(product)">
-                <img mat-card-image [src]="'assets/images/' + product.image_url">
+            <img mat-card-image [src]="'http://localhost:3000/images/' + product.image_url">
+                <!-- <p>{{ product.image_url }}</p> for testing -->
+                 <br/>
                 <mat-card-content>
                     <mat-card-title>{{product.name}}</mat-card-title>
                     <mat-card-subtitle>{{product.price | currency: 'CAD'}}</mat-card-subtitle>
