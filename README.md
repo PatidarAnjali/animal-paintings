@@ -1,27 +1,57 @@
-# AnimalPaintings
+# Animal Paintings
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+Animal Paintings is an Angular web app that displays a collection of animal-themed paintings. Users can browse, search, and sort through paintings dynamically. The application interacts with a backend API to fetch painting data and display images.
 
-## Development server
+### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
+### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+### Features
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Display a collection of animal paintings with images, names, and prices
+- Search paintings by name
+- Sort paintings by price (low → high / high → low)
+- Responsive design with Angular Material and Flex Layout
+- Dynamic integration with backend API
 
-## Running end-to-end tests
+### Technology Stack
+- Frontend:
+  - Angular 18
+  - Angular Material
+  - Flex Layout
+- Backend (optional / mock):
+  - Node.js + Express
+  - Serves product data and images
+- Other:
+  - CORS enabled for frontend-backend communication
+ 
+### Project Structure
+```
+animal-paintings/
+│
+├─ backend/             # Node.js backend serving API and images
+│  ├─ images/           # Painting images
+│  ├─ index.js
+│  └─ package.json
+│
+├─ src/                 # Angular frontend source code
+│  ├─ app/
+│  ├─ assets/
+│  └─ environments/
+│
+└─ package.json         # Frontend dependencies and scripts
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Screenshots
+<img width="3024" height="1416" alt="image" src="https://github.com/user-attachments/assets/71750492-4f05-4e56-8511-88d447f0ba15" />
+<img width="3024" height="1416" alt="image" src="https://github.com/user-attachments/assets/e5c60c38-7d9c-4aa4-8b7e-b89483a7988d" />
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### References
+- [Angular CLI Documentation](https://angular.dev/cli)
+- [Angular Material](https://material.angular.dev/)
+- [Flex Layout](https://github.com/angular/flex-layout)
